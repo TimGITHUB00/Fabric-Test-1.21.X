@@ -43,9 +43,5 @@ public class ModBlocks {
 
     public static void registerModBlocks() {
         TestMod.LOGGER.info("Registering Mod Blocks for " + TestMod.MOD_ID);
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
-           entries.add(ModBlocks.ALUMINUM_BLOCK);
-        });
     }
 }

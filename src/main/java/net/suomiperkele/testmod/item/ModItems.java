@@ -24,9 +24,5 @@ public class ModItems {
     public static void registerModItems() {
         TestMod.LOGGER.info("Registering Mod Items for " + TestMod.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
-            entries.add(RAW_ALUMINUM);
-            entries.add(ALUMINUM_INGOT);
-        });
     }
 }
