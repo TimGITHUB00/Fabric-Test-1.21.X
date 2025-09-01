@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_experium_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "testmod:experium_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "testmod:experium_ingot_from_blasting_experium_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_experium_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "testmod:experium_ingot_from_blasting_experium_ore"
+    ]
+  }
+}

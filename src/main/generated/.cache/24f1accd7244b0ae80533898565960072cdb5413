@@ -1,0 +1,14 @@
+// 1.21.8	-999999999-01-01T00:00:00	Test Mod/Model Definitions
+ad59052546621d5c40b164f6ea86be0564b7630f assets/testmod/blockstates/experium_block.json
+f90d26db5f0acbd1f4d7e5ea02e8d5d7e275c8e8 assets/testmod/blockstates/experium_ore.json
+ae65e859de04e5223f0120d2659d90da619b7758 assets/testmod/blockstates/raw_experium_block.json
+383310aafba93f29b3d4bcdc6473288938e18cb9 assets/testmod/items/experium_block.json
+4701763fe4c33f220c893b611940caece42250be assets/testmod/items/experium_ingot.json
+f5626f491ef3755eb1ba85702865939493a3e9d9 assets/testmod/items/experium_ore.json
+4f3e64c800679f0ccd6a9a36b116311939c5a538 assets/testmod/items/raw_experium.json
+70314d2cb707d9a1bc3ec204950141e8424c2b4c assets/testmod/items/raw_experium_block.json
+dfb958e4ce62eadcbaa46a45b5d140573d1d96d0 assets/testmod/models/block/experium_block.json
+062e37a38fbef27ee2fc75a48be3e21bcd8e4506 assets/testmod/models/block/experium_ore.json
+794f55fcd3ff06956197d9b8568460577a889d9d assets/testmod/models/block/raw_experium_block.json
+1d9bfd97c633f325c9ad2beab3c376af02e5088a assets/testmod/models/item/experium_ingot.json
+b8b7ef40968e98335824b1e2d37b2e32f66ebbcb assets/testmod/models/item/raw_experium.json
