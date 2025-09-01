@@ -1,10 +1,10 @@
 {
-  "item.testmod.raw_aluminum": "Raw Aluminum",
-  "item.testmod.aluminum_ingot": "Aluminum Ingot",
+  "item.testmod.raw_experium": "Raw Experium",
+  "item.testmod.experium_ingot": "Experium Ingot",
 
-  "item.testmod.aluminum_block": "Block of Aluminum",
-  "item.testmod.aluminum_ore": "Aluminum Ore",
+  "item.testmod.experium_block": "Block of Experium",
+  "item.testmod.experium_ore": "Experium Ore",
 
-  "itemgroup.testmod.aluminum_items": "Aluminum Items",
-  "itemgroup.testmod.aluminum_blocks": "Aluminum Blocks"
+  "itemgroup.testmod.experium_items": "Experium Items",
+  "itemgroup.testmod.experium_blocks": "Experium Blocks"
 }

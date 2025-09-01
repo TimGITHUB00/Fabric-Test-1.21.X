@@ -12,21 +12,22 @@ import net.suomiperkele.testmod.block.ModBlocks;
 
 public class ModItemGroups {
     public static final ItemGroup ALUMINUM_ITEMS_GROUP = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(TestMod.MOD_ID, "aluminum_items"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.ALUMINUM_INGOT))
-                    .displayName(Text.translatable("itemgroup.testmod.aluminum_items"))
+            Identifier.of(TestMod.MOD_ID, "experium_items"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.EXPERIUM_INGOT))
+                    .displayName(Text.translatable("itemgroup.testmod.experium_items"))
                     .entries((displayContext, entries) -> {
-                        entries.add(ModItems.ALUMINUM_INGOT);
-                        entries.add(ModItems.RAW_ALUMINUM);
+                        entries.add(ModItems.EXPERIUM_INGOT);
+                        entries.add(ModItems.RAW_EXPERIUM);
                     }).build());
 
     public static final ItemGroup ALUMINUM_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(TestMod.MOD_ID, "aluminum_blocks"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.ALUMINUM_BLOCK))
-                    .displayName(Text.translatable("itemgroup.testmod.aluminum_blocks"))
+            Identifier.of(TestMod.MOD_ID, "experium_blocks"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.EXPERIUM_BLOCK))
+                    .displayName(Text.translatable("itemgroup.testmod.experium_blocks"))
                     .entries((displayContext, entries) -> {
-                        entries.add(ModBlocks.ALUMINUM_BLOCK);
-                        entries.add(ModBlocks.ALUMINUM_ORE);
+                        entries.add(ModBlocks.RAW_EXPERIUM_BLOCK);
+                        entries.add(ModBlocks.EXPERIUM_BLOCK);
+                        entries.add(ModBlocks.EXPERIUM_ORE);
                     }).build());
 
     public static void registerItemGroups() {
