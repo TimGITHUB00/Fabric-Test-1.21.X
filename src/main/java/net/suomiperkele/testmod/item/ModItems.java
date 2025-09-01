@@ -28,5 +28,6 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(EXPERIUM_INGOT);
             entries.add(RAW_EXPERIUM);
+        });
     }
 }
