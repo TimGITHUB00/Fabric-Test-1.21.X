@@ -4,9 +4,7 @@
   "cookingtime": 100,
   "experience": 0.2,
   "group": "aluminum_ingot",
-  "ingredient": {
-    "item": "testmod:raw_aluminum"
-  },
+  "ingredient": "testmod:raw_aluminum",
   "result": {
     "id": "testmod:aluminum_ingot"
   }
