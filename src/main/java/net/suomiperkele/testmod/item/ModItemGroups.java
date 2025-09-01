@@ -18,6 +18,13 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.EXPERIUM_INGOT);
                         entries.add(ModItems.RAW_EXPERIUM);
+
+                        entries.add(ModItems.EXPERIUM_SWORD);
+                        entries.add(ModItems.EXPERIUM_PICKAXE);
+                        entries.add(ModItems.EXPERIUM_SHOVEL);
+                        entries.add(ModItems.EXPERIUM_AXE);
+                        entries.add(ModItems.EXPERIUM_HOE);
+
                     }).build());
 
     public static final ItemGroup ALUMINUM_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,

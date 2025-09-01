@@ -2,6 +2,12 @@
   "item.testmod.raw_experium": "Raw Experium",
   "item.testmod.experium_ingot": "Experium Ingot",
 
+  "item.testmod.experium_sword": "Experium Sword",
+  "item.testmod.experium_pickaxe": "Experium Pickaxe",
+  "item.testmod.experium_shovel": "Experium Shovel",
+  "item.testmod.experium_axe": "Experium Axe",
+  "item.testmod.experium_hoe": "Experium Hoe",
+
   "item.testmod.experium_block": "Block of Experium",
   "item.testmod.experium_ore": "Experium Ore",
 

@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 import net.suomiperkele.testmod.block.ModBlocks;
+import net.suomiperkele.testmod.util.ModTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -24,5 +25,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.RAW_EXPERIUM_BLOCK)
                 .add(ModBlocks.EXPERIUM_BLOCK)
                 .add(ModBlocks.EXPERIUM_ORE);
+
+        valueLookupBuilder(ModTags.Blocks.NEEDS_EXPERIUM_TOOL)
+                .addTag(BlockTags.NEEDS_IRON_TOOL);
     }
 }

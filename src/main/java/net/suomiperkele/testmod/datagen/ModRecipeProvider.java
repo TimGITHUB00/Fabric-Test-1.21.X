@@ -2,10 +2,9 @@ package net.suomiperkele.testmod.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.block.Block;
+import net.minecraft.item.Items;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
-import net.minecraft.data.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
@@ -43,6 +42,51 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 createShapeless(RecipeCategory.MISC, ModItems.RAW_EXPERIUM, 9)
                         .input(ModBlocks.RAW_EXPERIUM_BLOCK)
                         .criterion(hasItem(ModBlocks.RAW_EXPERIUM_BLOCK), conditionsFromItem(ModBlocks.RAW_EXPERIUM_BLOCK))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.EXPERIUM_SWORD)
+                        .pattern(" R ")
+                        .pattern(" R ")
+                        .pattern(" S ")
+                        .input('R', ModItems.EXPERIUM_INGOT)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.EXPERIUM_INGOT), conditionsFromItem(ModItems.EXPERIUM_INGOT))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.EXPERIUM_PICKAXE)
+                        .pattern("RRR")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('R', ModItems.EXPERIUM_INGOT)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.EXPERIUM_INGOT), conditionsFromItem(ModItems.EXPERIUM_INGOT))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.EXPERIUM_SHOVEL)
+                        .pattern(" R ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('R', ModItems.EXPERIUM_INGOT)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.EXPERIUM_INGOT), conditionsFromItem(ModItems.EXPERIUM_INGOT))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.EXPERIUM_AXE)
+                        .pattern("RR ")
+                        .pattern("RS ")
+                        .pattern(" S ")
+                        .input('R', ModItems.EXPERIUM_INGOT)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.EXPERIUM_INGOT), conditionsFromItem(ModItems.EXPERIUM_INGOT))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.EXPERIUM_HOE)
+                        .pattern("RR ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('R', ModItems.EXPERIUM_INGOT)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.EXPERIUM_INGOT), conditionsFromItem(ModItems.EXPERIUM_INGOT))
                         .offerTo(exporter);
             }
         };
