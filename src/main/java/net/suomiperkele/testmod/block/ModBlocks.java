@@ -19,6 +19,8 @@ import java.util.function.Function;
 public class ModBlocks {
     public static final Block ALUMINUM_BLOCK = register("aluminum_block", Block::new, AbstractBlock.Settings.create().
             strength(4f).requiresTool().sounds(BlockSoundGroup.IRON), true);
+    public static final Block ALUMINUM_ORE = register("aluminum_ore", Block::new, AbstractBlock.Settings.create().
+            strength(3f).requiresTool().sounds(BlockSoundGroup.STONE), true);
 
     private static Block register(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings, boolean shouldRegisterItem) {
         RegistryKey<Block> blockKey = keyOfBlock(name);

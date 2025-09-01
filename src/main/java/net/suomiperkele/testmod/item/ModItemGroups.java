@@ -26,6 +26,7 @@ public class ModItemGroups {
                     .displayName(Text.translatable("itemgroup.testmod.aluminum_blocks"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModBlocks.ALUMINUM_BLOCK);
+                        entries.add(ModBlocks.ALUMINUM_ORE);
                     }).build());
 
     public static void registerItemGroups() {
