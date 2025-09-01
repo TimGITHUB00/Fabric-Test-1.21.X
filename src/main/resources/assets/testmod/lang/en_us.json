@@ -2,5 +2,8 @@
   "item.testmod.raw_aluminum": "Raw Aluminum",
   "item.testmod.aluminum_ingot": "Aluminum Ingot",
 
-  "block.testmod.aluminum_block": "Block of Aluminum"
+  "item.testmod.aluminum_block": "Block of Aluminum",
+
+  "itemgroup.testmod.aluminum_items": "Aluminum Items",
+  "itemgroup.testmod.aluminum_blocks": "Aluminum Blocks"
 }

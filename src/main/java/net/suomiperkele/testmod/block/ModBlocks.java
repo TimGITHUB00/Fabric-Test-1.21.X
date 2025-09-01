@@ -8,23 +8,35 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.suomiperkele.testmod.TestMod;
 
-public class ModBlocks {
-    public static final Block ALUMINUM_BLOCK = registerBlock("aluminum_block",
-            new Block(AbstractBlock.Settings.create().strength(4f)
-                    .requiresTool().sounds(BlockSoundGroup.IRON)));
+import java.util.function.Function;
 
-    private static Block registerBlock(String name, Block block) {
-        registerBlockItem(name, block);
-        return Registry.register(Registries.BLOCK, Identifier.of(TestMod.MOD_ID, name), block);
+public class ModBlocks {
+    public static final Block ALUMINUM_BLOCK = register("aluminum_block", Block::new, AbstractBlock.Settings.create().
+            strength(4f).requiresTool().sounds(BlockSoundGroup.IRON), true);
+
+    private static Block register(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings, boolean shouldRegisterItem) {
+        RegistryKey<Block> blockKey = keyOfBlock(name);
+        Block block = blockFactory.apply(settings.registryKey(blockKey));
+        if (shouldRegisterItem) {
+            RegistryKey<Item> itemKey = keyOfItem(name);
+            BlockItem blockItem = new BlockItem(block, new Item.Settings().registryKey(itemKey));
+            Registry.register(Registries.ITEM, itemKey, blockItem);
+        }
+        return Registry.register(Registries.BLOCK, blockKey, block);
     }
 
-    private static void registerBlockItem(String name, Block block) {
-        Registry.register(Registries.ITEM, Identifier.of(TestMod.MOD_ID, name),
-                new BlockItem(block, new Item.Settings()));
+    private static RegistryKey<Block> keyOfBlock(String name) {
+        return RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TestMod.MOD_ID, name));
+    }
+
+    private static RegistryKey<Item> keyOfItem(String name) {
+        return RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestMod.MOD_ID, name));
     }
 
     public static void registerModBlocks() {
