@@ -19,11 +19,17 @@ public class ModItems {
     public static final Item EXPERIUM_PICKAXE = registerItem("experium_pickaxe",
             setting -> new Item(setting.pickaxe(ModToolMaterials.EXPERIUM, 1, -2.8f)));
     public static final Item EXPERIUM_SHOVEL = registerItem("experium_shovel",
+            setting -> new Item(setting.shovel(ModToolMaterials.EXPERIUM, 1.5f, -3.0f)));
+    public static final Item EXPERIUM_AXE = registerItem("experium_axe",
+            setting -> new Item(setting.axe(ModToolMaterials.EXPERIUM, 6, -3.2f)));
+    public static final Item EXPERIUM_HOE = registerItem("experium_hoe",
+            setting -> new Item(setting.hoe(ModToolMaterials.EXPERIUM, 3, -2.4f)));
+    /*public static final Item EXPERIUM_SHOVEL = registerItem("experium_shovel",
             setting -> new ShovelItem(ModToolMaterials.EXPERIUM, 1.5f, -3.0f, new Item.Settings()));
     public static final Item EXPERIUM_AXE = registerItem("experium_axe",
             setting -> new AxeItem(ModToolMaterials.EXPERIUM, 6, -3.2f, new Item.Settings()));
     public static final Item EXPERIUM_HOE = registerItem("experium_hoe",
-            setting -> new HoeItem(ModToolMaterials.EXPERIUM, 3, -2.4f, new Item.Settings()));
+            setting -> new HoeItem(ModToolMaterials.EXPERIUM, 3, -2.4f, new Item.Settings()));*/
 
     private static Item registerItem(String name, Function<Item.Settings, Item> function) {
         return Registry.register(Registries.ITEM, Identifier.of(TestMod.MOD_ID, name),
