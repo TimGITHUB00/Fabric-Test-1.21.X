@@ -21,7 +21,7 @@ public class ModPlacedFeatures {
 
         register(context, EXPERIUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.EXPERIUM_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(14,
-                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(6), YOffset.fixed(69))));
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(80))));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {
